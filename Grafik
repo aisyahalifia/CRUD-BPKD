@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <h4>Data Pajak</h4>
+    <div>
+    </div>
+
+    <script>
+            $(document).ready(function(){
+            $.ajax({
+                url: "https://samsat.bengkuluprov.go.id/pkb_dummy_data.json",
+                method: "GET",
+                contentType: 'application/json',
+                headers: {  'Access-Control-Allow-Origin': '*' },
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (result) {
+                    alert("Error");
+                }
+
+                
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
